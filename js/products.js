@@ -1,5 +1,5 @@
 const listingContainer = document.querySelector(".jackets-grid-container");
-const url = "http://headless.epokestudio.no/wp-json/wc/store/products";
+const url = "http://headless.epokestudio.no/wp-json/wc/store/products/";
 
 async function fetchListings() {
   try {
