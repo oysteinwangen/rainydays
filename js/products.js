@@ -1,4 +1,4 @@
-const listingContainer = document.querySelector(".listing-container");
+const listingContainer = document.querySelector(".jackets-grid-container");
 const url = "http://headless.epokestudio.no/wp-json/wc/store/products";
 
 async function fetchListings() {
@@ -8,22 +8,32 @@ async function fetchListings() {
 
     console.log(listings);
 
-    photosContainer.innerHTML = "";
+    listingContainer.innerHTML = "";
 
-    for (let i = 0; i < listings.hits.length; i++) {
-      if (!listings.hits[i].user) {
+    for (let i = 0; i < listings.length; i++) {
+      if (!listings[i]) {
         continue;
       }
       if (i >= 15) {
         break;
       }
 
-      listingContainer.innerHTML += `<a href="/details.html?id=${photos.hits[i].id}" class="listing">
-        <img class="listing-photo" src="${photos.hits[i].largeImageURL}></img>""
+      let priceAdj = listings[i].prices.price / 100;
+
+      listingContainer.innerHTML += `
+      <a href="./product.html?id=${listings[i].id}">
+      <div class="jacket">
+        <img src="${listings[i].images[0].src}" />
+        <h3>${listings[i].name}</h3>
+        <p>$ ${priceAdj}</p>
+      </div></a>
+    
+      <a href="/product.html" class="listing">
+        <img class="listing-photo"></img>""
         <div class="listing-username">
         <p class="listing-username-text">
-        Taken by: ${photos.hits[i].user} </br>
-        Likes: ${photos.hits[i].likes}</p>
+        Taken by:  </br>
+        Likes: </p>
         </div>
         </a>`;
     }
