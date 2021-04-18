@@ -1,14 +1,15 @@
-const apiKey = "3957450-287d8f08397456bf01b762222";
-
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
-const photoId = params.get("id");
+const productId = params.get("id");
 
-const url = "https://pixabay.com/api/?key=" + apiKey + "&id=" + photoId;
+const url =
+  "https://headless.epokestudio.no/wp-json/wc/store/products/" + productId;
 
-const detailsContainer = document.querySelector(".details-container");
+const detailsContainer = document.querySelector(".product-text");
+const productImage = document.querySelector(".product-image");
+
 const htmlTitle = document.querySelector("title");
 
 async function fetchDetails() {
@@ -18,18 +19,20 @@ async function fetchDetails() {
 
     console.log(details);
 
-    detailsContainer.innerHTML = `<div>
-    <img class="full-photo" src=${details.hits[0].largeImageURL}></img>
-    <div class="listing-username">
-    <p class="listing-username-text">Taken by: ${details.hits[0].user}</p>
-    <p class="listing-username-text">Tags: ${details.hits[0].tags}</p>
-    <p class="listing-username-text">Views: ${details.hits[0].views}</p>
-    <p class="listing-username-text">Likes: ${details.hits[0].likes}</p>
-    </div>
-    </div>
-    `;
+    let priceAdj = details.prices.price / 100;
 
-    htmlTitle.innerHTML = details.hits[0].user;
+    productImage.innerHTML = `<img src=${details.images[0].src} />`;
+
+    detailsContainer.innerHTML = `
+    <h1>${details.name}</h1>
+    <h3>$ ${priceAdj}</h3>
+    <a class="hero-button-link" href="/checkout.html">Buy now</a>
+    <hr />
+
+${details.description}
+
+    `;
+    htmlTitle.innerHTML = details.name;
   } catch (error) {
     console.log(error);
     detailsContainer.innerHTML = "";
