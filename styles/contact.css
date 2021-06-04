@@ -1,0 +1,46 @@
+label {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.form-field-wrapper {
+  margin-bottom: 20px;
+  max-width: 85ch;
+}
+
+input {
+  width: 100%;
+  min-height: 35px;
+  padding: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+}
+
+textarea {
+  padding: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+}
+
+button {
+  padding: 8px 50px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(192, 192, 192);
+}
+
+.form-error {
+  display: none;
+  color: red;
+  margin-top: 5px;
+  font-size: 1.3rem;
+}
+
+.successmessage {
+  display: none;
+  margin-top: 30px;
+  font-family: "atkinson_bold", sans-serif;
+  color: green;
+}

@@ -15,6 +15,7 @@
 
     <link rel="icon" href="./icons/favicon-rd.svg" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/contact.css">
     <title>Contact Us | Rainy Days</title>
   </head>
   <body>
@@ -68,6 +69,41 @@
       </div>
       <h1>Contact us</h1>
       <hr />
+      <form id="form">
+        <div class="form-field-wrapper">
+          <label>Name (required)</label>
+          <input name="fullName" id="fullName" />
+          <div class="form-error" id="fullNameError">
+            Please enter your name
+          </div>
+        </div>
+        <div class="form-field-wrapper">
+          <label>Subject</label>
+          <input name="subject" id="subject" />
+        </div>
+        <div class="form-field-wrapper">
+          <label>Email (required)</label>
+          <input name="email" id="email" />
+          <div class="form-error" id="emailError">
+            Please enter a valid email address
+          </div>
+        </div>
+        <div class="form-field-wrapper">
+          <label>Message (minimum 15 characters)</label>
+          <textarea
+            name="message"
+            id="message"
+            style="width: 100%; min-height: 100px"
+          ></textarea>
+          <div class="form-error" id="messageError">
+            Your message must be at least 15 characters
+          </div>
+        </div>
+        <button>Submit</button>
+      </form>
+      <p class="successmessage">
+        You're message is received. We'll be in touch shortly. Thank you!
+      </p>
       <div class="footercontainer">
         <div class="footer1">
           <img src="./images/Logo Rainy Days.png" alt="Rainy Days Logo" />
@@ -122,5 +158,6 @@
       </div>
     </footer>
     <script src="./js/burger.js"></script>
+    <script src="./js/contact.js"></script>
   </body>
 </html>
