@@ -13,8 +13,8 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" href="/icons/favicon-rd.svg" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="icon" href="./icons/favicon-rd.svg" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Rainy Days | Pushing The Comfort Zone</title>
   </head>
   <body>
@@ -25,7 +25,7 @@
           <div class="wshippingc">
             <h5 class="wshipping">Worldwide shipping</h5>
             <img
-              src="/icons/globe-solid.svg"
+              src="./icons/globe-solid.svg"
               alt="globe"
               class="wshippingimg"
             />
@@ -33,52 +33,57 @@
         </div>
       </div>
       <div class="main-header">
-        <a href="/"
+        <a href="index.html"
           ><img
             id="logo"
-            src="/images/Logo Rainy Days.png"
+            src="./images/Logo Rainy Days.png"
             alt="Rainy Days Logo"
         /></a>
-        <a href="/checkout.html"
+        <a href="./checkout.html"
           ><img
             class="carticon"
-            src="/icons/shopping-basket-solid.svg"
+            src="./icons/shopping-basket-solid.svg"
             alt="Shopping Cart icon"
         /></a>
       </div>
       <nav class="navbar">
-        <ul id="nav-left">
-          <li><a href="/">Home</a></li>
-          <li><a href="/mens.html">Men's</a></li>
-          <li><a href="/mens.html">Women's</a></li>
+        <ul id="nav-left" class="nav-links">
+          <li><a id="active-nav" href="./index.html">Home</a></li>
+          <li><a href="./mens.html">Men's</a></li>
+          <li><a href="./mens.html">Women's</a></li>
+          <li><a href="./contact.html">Contact us</a></li>
+          <li><a href="./about.html">About us</a></li>
         </ul>
-        <ul id="nav-right">
-          <li><a href="/contact.html">Contact us</a></li>
-          <li><a href="/about.html">About us</a></li>
-        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
       </nav>
     </header>
-    <section class="hero-home">
-      <h1>High quality rain jackets</h1>
-      <h2>For men and women</h2>
-      <a class="hero-button-link" href="#shop-now">Shop now</a>
-    </section>
-    <section id="shop-now" class="shop-now">
-      <a href="/mens.html"
-        ><div class="home-mens">
-          <h3>Men's</h3>
-        </div></a
-      >
-      <a href="/mens.html"
-        ><div class="home-womens">
-          <h3>Women's</h3>
-        </div></a
-      >
-    </section>
+    <main>
+      <section class="hero-home">
+        <h1>High quality rain jackets</h1>
+        <h2>For men and women</h2>
+        <a class="hero-button-link" href="#shop-now">Shop now</a>
+      </section>
+      <section id="shop-now" class="shop-now">
+        <a href="./mens.html"
+          ><div class="home-mens">
+            <h3>Men's</h3>
+          </div></a
+        >
+        <a href="./mens.html"
+          ><div class="home-womens">
+            <h3>Women's</h3>
+          </div></a
+        >
+      </section>
+    </main>
     <footer>
       <div class="footercontainer">
         <div class="footer1">
-          <img src="/images/Logo Rainy Days.png" alt="Rainy Days Logo" />
+          <img src="./images/Logo Rainy Days.png" alt="Rainy Days Logo" />
           <h3>Call us</h3>
           <p>+47 973 12 345</p>
           <h3>Email customer care</h3>
@@ -87,12 +92,12 @@
 
         <div class="footer2">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/mens.html">Men's</a></li>
-            <li><a href="/mens.html">Women's</a></li>
-            <li><a href="/about.html">About us</a></li>
-            <li><a href="/contact.html">Contact us</a></li>
-            <li><a href="/checkout.html">Checkout</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./mens.html">Men's</a></li>
+            <li><a href="./mens.html">Women's</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+            <li><a href="./checkout.html">Checkout</a></li>
           </ul>
         </div>
         <div class="footer3">
@@ -103,20 +108,21 @@
           </form>
           <div class="social-footer">
             <a href="#"
-              ><img src="/icons/youtube-brands.svg" alt="Youtube"
+              ><img src="./icons/youtube-brands.svg" alt="Youtube"
             /></a>
             <a href="#"
-              ><img src="/icons/twitter-brands.svg" alt="Twitter"
+              ><img src="./icons/twitter-brands.svg" alt="Twitter"
             /></a>
             <a href="#"
-              ><img src="/icons/facebook-f-brands.svg" alt="Facebook"
+              ><img src="./icons/facebook-f-brands.svg" alt="Facebook"
             /></a>
             <a href="#"
-              ><img src="/icons/pinterest-brands.svg" alt="Pinterest"
+              ><img src="./icons/pinterest-brands.svg" alt="Pinterest"
             /></a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="./js/burger.js"></script>
   </body>
 </html>

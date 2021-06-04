@@ -6,8 +6,6 @@ async function fetchListings() {
     const response = await fetch(url);
     const listings = await response.json();
 
-    console.log(listings);
-
     listingContainer.innerHTML = "";
 
     for (let i = 0; i < listings.length; i++) {
@@ -28,7 +26,7 @@ async function fetchListings() {
         <p>$ ${priceAdj}</p>
       </div></a>
     
-      <a href="/product.html" class="listing">
+      <a href="./product.html" class="listing">
         <img class="listing-photo"></img>""
         <div class="listing-username">
         <p class="listing-username-text">
@@ -38,7 +36,6 @@ async function fetchListings() {
         </a>`;
     }
   } catch (error) {
-    console.log(error);
     listingContainer.innerHTML = "";
     listingContainer.innerHTML = error;
   }

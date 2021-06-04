@@ -17,8 +17,6 @@ async function fetchDetails() {
     const response = await fetch(url);
     const details = await response.json();
 
-    console.log(details);
-
     let priceAdj = details.prices.price / 100;
 
     productImage.innerHTML = `<img src=${details.images[0].src} />`;
@@ -26,7 +24,7 @@ async function fetchDetails() {
     detailsContainer.innerHTML = `
     <h1>${details.name}</h1>
     <h3>$ ${priceAdj}</h3>
-    <a class="hero-button-link" href="/checkout.html">Buy now</a>
+    <a class="hero-button-link" href="./checkout.html">Buy now</a>
     <hr />
 
 ${details.description}
@@ -34,7 +32,6 @@ ${details.description}
     `;
     htmlTitle.innerHTML = details.name;
   } catch (error) {
-    console.log(error);
     detailsContainer.innerHTML = "";
     detailsContainer.innerHTML = error;
   }

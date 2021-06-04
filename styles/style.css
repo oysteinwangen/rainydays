@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
 
 h1 {
@@ -165,16 +166,97 @@ button {
   display: flex;
 }
 
+#nav-left li {
+  margin-right: 15px;
+}
+
 .navbar li:hover {
   font-weight: 700;
 }
 
-#nav-left li {
-  padding-right: 15px;
+#active-nav {
+  font-weight: 700;
 }
 
-#nav-right li {
-  padding-left: 15px;
+/* BURGER */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: white;
+}
+
+.line1 {
+  transition: all 0.3s ease;
+}
+.line2 {
+  transition: all 0.3s ease;
+}
+.line3 {
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+    margin-left: auto;
+    transition: all 1s ease;
+  }
+
+  .burgertoggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: #0a3540;
+  }
+  .burgertoggle .line2 {
+    opacity: 0;
+    background-color: #0a3540;
+  }
+  .burgertoggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: #0a3540;
+  }
+
+  .burgertoggle {
+    background-color: #0a3540;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(0);
+    opacity: 0%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    transition: opacity 0.5s ease;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #0a3540;
+  }
+
+  .nav-active {
+    transform: scale(1);
+    opacity: 100%;
+  }
+  #nav-active {
+    font-weight: 300;
+  }
 }
 
 /* MAIN CONTENT*/
@@ -185,7 +267,7 @@ button {
       rgb(255, 255, 255, 0.3),
       rgba(255, 255, 255, 0.5)
     ),
-    url("/images/hero-bg.jpg");
+    url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1400px;
@@ -201,14 +283,15 @@ button {
   margin: 20px 0;
   padding: 10px 5%;
   border-style: none;
-  background-color: #cf7736;
+  background-color: #115869;
   color: white;
   font-size: 1.5rem;
   text-transform: uppercase;
+  transition: background-color 300ms;
 }
 
 .hero-button-link:hover {
-  background-color: #e09a67;
+  background-color: #0a3540;
 }
 
 .shop-now {
@@ -227,7 +310,7 @@ button {
 
 .home-mens {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-    url("/images/Mens.jpg");
+    url("../images/Mens.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -243,12 +326,12 @@ button {
 
 .home-mens:hover {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url("/images/Mens.jpg");
+    url("../images/Mens.jpg");
 }
 
 .home-womens {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-    url("/images/Womens.jpg");
+    url("../images/Womens.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -264,7 +347,7 @@ button {
 
 .home-womens:hover {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url("/images/Womens.jpg");
+    url("../images/Womens.jpg");
 }
 
 /* JACKETS LIST */
@@ -278,7 +361,7 @@ button {
   display: flex;
   row-gap: 5rem;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .jacket img {
@@ -532,7 +615,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 440px) {
+/*@media screen and (max-width: 440px) {
   .navbar {
     min-height: 2rem;
     margin: auto;
@@ -561,14 +644,11 @@ footer {
     justify-content: space-evenly;
     padding: 5px;
   }
-  #nav-right {
-    display: none;
-    justify-content: space-around;
-  }
+
   #nav-right a {
     font-size: 1.3rem;
   }
-}
+}*/
 
 /* SPINNER LOADER */
 .spinner {

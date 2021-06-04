@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content="An online shop selling men's and women’s rain jackets. They are designed for a range of different outdoor activities such as hiking."
+      content="Contact us here at Rainy Days"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="icon" href="/icons/favicon-rd.svg" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="icon" href="./icons/favicon-rd.svg" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Contact Us | Rainy Days</title>
   </head>
   <body>
@@ -25,7 +25,7 @@
           <div class="wshippingc">
             <h5 class="wshipping">Worldwide shipping</h5>
             <img
-              src="/icons/globe-solid.svg"
+              src="./icons/globe-solid.svg"
               alt="globe"
               class="wshippingimg"
             />
@@ -33,50 +33,55 @@
         </div>
       </div>
       <div class="main-header">
-        <a href="/"
+        <a href="./"
           ><img
             id="logo"
-            src="/images/Logo Rainy Days.png"
+            src="./images/Logo Rainy Days.png"
             alt="Rainy Days Logo"
         /></a>
-        <a href="/checkout.html"
+        <a href="./checkout.html"
           ><img
             class="carticon"
-            src="/icons/shopping-basket-solid.svg"
+            src="./icons/shopping-basket-solid.svg"
             alt="Shopping Cart icon"
         /></a>
       </div>
       <nav class="navbar">
-        <ul id="nav-left">
-          <li><a href="/">Home</a></li>
-          <li><a href="/mens.html">Men's</a></li>
-          <li><a href="/mens.html">Women's</a></li>
+        <ul id="nav-left" class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./mens.html">Men's</a></li>
+          <li><a href="./mens.html">Women's</a></li>
+          <li><a id="active-nav" href="./contact.html">Contact us</a></li>
+          <li><a href="./about.html">About us</a></li>
         </ul>
-        <ul id="nav-right">
-          <li><a href="/contact.html">Contact us</a></li>
-          <li><a href="/about.html">About us</a></li>
-        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
       </nav>
     </header>
+    <main>
     <section class="contact-page">
       <div class="contact-hero">
-        <img src="/images/Contact image.jpg" alt="mail boxes" />
+        <img src="./images/Contact image comp.jpg" alt="mail boxes" />
       </div>
       <h1>Contact us</h1>
       <hr />
       <div class="footercontainer">
         <div class="footer1">
-          <img src="/images/Logo Rainy Days.png" alt="Rainy Days Logo" />
+          <img src="./images/Logo Rainy Days.png" alt="Rainy Days Logo" />
           <h3>Call us</h3>
           <p>+47 973 12 345</p>
           <h3>Email customer care</h3>
           <p>support@rainydays.com</p>
         </div>
     </section>
+  </main>
     <footer>
       <div class="footercontainer">
         <div class="footer1">
-          <img src="/images/Logo Rainy Days.png" alt="Rainy Days Logo" />
+          <img src="./images/Logo Rainy Days.png" alt="Rainy Days Logo" />
           <h3>Call us</h3>
           <p>+47 973 12 345</p>
           <h3>Email customer care</h3>
@@ -85,12 +90,12 @@
 
         <div class="footer2">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/mens.html">Men's</a></li>
-            <li><a href="/mens.html">Women's</a></li>
-            <li><a href="/about.html">About us</a></li>
-            <li><a href="/contact.html">Contact us</a></li>
-            <li><a href="/checkout.html">Checkout</a></li>
+            <li><a href="./">Home</a></li>
+            <li><a href="./mens.html">Men's</a></li>
+            <li><a href="./mens.html">Women's</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+            <li><a href="./checkout.html">Checkout</a></li>
           </ul>
         </div>
         <div class="footer3">
@@ -101,20 +106,21 @@
           </form>
           <div class="social-footer">
             <a href="#"
-              ><img src="/icons/youtube-brands.svg" alt="Youtube"
+              ><img src="./icons/youtube-brands.svg" alt="Youtube"
             /></a>
             <a href="#"
-              ><img src="/icons/twitter-brands.svg" alt="Twitter"
+              ><img src="./icons/twitter-brands.svg" alt="Twitter"
             /></a>
             <a href="#"
-              ><img src="/icons/facebook-f-brands.svg" alt="Facebook"
+              ><img src="./icons/facebook-f-brands.svg" alt="Facebook"
             /></a>
             <a href="#"
-              ><img src="/icons/pinterest-brands.svg" alt="Pinterest"
+              ><img src="./icons/pinterest-brands.svg" alt="Pinterest"
             /></a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="./js/burger.js"></script>
   </body>
 </html>
