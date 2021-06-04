@@ -405,14 +405,17 @@ main {
   max-width: 1400px;
   margin: auto;
   padding: 0 10px;
+  overflow-y: hidden;
 }
 
 .contact-hero img {
-  width: 100%;
+  width: 110%;
   height: 300px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 5rem;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 /* ABOUT PAGE */
