@@ -365,6 +365,7 @@ main {
 .jackets-grid-container {
   display: flex;
   row-gap: 5rem;
+  column-gap: 3.5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
